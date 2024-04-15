@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+header{
+  animation: zoom 1s;
+}
+main{
+  animation: zoomin 1s;
+}
+
+@keyframes zoom
+{
+  0%
+  {
+
+      opacity: 0;
+      transform: translateY(-30px) scale(2);
+  }
+  100%
+  {
+      opacity: 1;
+      transform:translatey(0px) scale(1);
+  }
+  }
+
+
+@keyframes zoomin
+{
+  0%
+  {
+      opacity: 0;
+      transform: translatey(-30px) scale(0.1);
+  }
+
+  100%
+  {
+      opacity: 1;
+      transform: translatey(0px) scal(1);
+  } 
+}
+
+
+/*  navigation effet*/
+
+
+nav.stroke ul li a,
+.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+.fill ul li a {
+  transition: all 2s;
+}
+
+.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+.fill ul li a:hover {
+  color: white;
+  z-index: 1;
+}
+.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+
+
+
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+/* effect end*/ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'urbanist', sans-serif;
+}
+
+:root {
+  --bs-dark-color: #1a1d20;
+  --bs-dark-primary: #1c1c1c;
+  --bs-main-color: #fff;
+  --bd-primary-color: #c6c6c6;
+  ;
+  --secondary-color: #29a9fd;
+  --bs-supporting-color: #c850c0;
+
+}
+
+/*media query*/
+
+@media screen and (max-width: 1400px) {
+
+  .hero-video--section {
+    width: 25rem;
+    border-radius: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .hero-section {
+    height: 80vh;
+  }
+
+  .hero-video--section {
+    width: 20rem;
+    border-radius: 1rem;
+  }
+}
+
+
+
+@media screen and (max-width: 998px) {
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  section .common-heading {
+    font-size: 2rem;
+  }
+
+  section .para-width {
+    width: auto;
+  }
+
+  .hero-section {
+    height: 100vh;
+  }
+
+  .navbar-toggler {
+    border-color: var(--bs-main-color);
+  }
+
+  .navbar-toggler-icon {
+    background-color: var(--bs-main-color);
+  }
+
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'lexend deca ', sans-serif;
+}
+
+h1 {
+  font-size: 3.8rem;
+
+}
+
+h2 {
+  line-height: 3rem;
+  font-weight: 600;
+  font-size: 3.4rem;
+}
+
+p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--bs-dark-color);
+  letter-spacing: 0.07rem;
+  line-height: 1.55rem;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+}
+
+a {
+  text-decoration: none;
+
+}
+
+li {
+  list-style: none;
+}
+
+/*nav  bar*/
+.nav-link {
+  color: var(--bd-primary-color);
+  font-weight: bold;
+
+}
+
+.nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+.text-light-grey {
+  color: var(--bd-primary-color)
+}
+
+/* hero section*/
+
+button,
+a {
+  font-size: 1.5rem !important;
+  letter-spacing: 0.03rem;
+  word-spacing: .1rem;
+}
+
+.custom-shape-divider-bottom-1712729490 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1712729490 svg {
+  position: relative;
+  display: block;
+  width: calc(176% + 1.3px);
+  height: 169px;
+}
+
+.custom-shape-divider-bottom-1712729490 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.hero-section,
+.container {
+  display: grid;
+  place-content: center;
+  height: inherit;
+}
+
+.bg-main {
+  height: 80vh;
+  position: relative;
+}
+
+.hero-video--section {
+  width: 30rem;
+  border-radius: 2rem;
+}
+
+.bg-color {
+  background-color: var(--bs-dark-primary);
+}
+
+/*.bg-theme{
+    color: var(--bs-supporting-color);
+    background-image: none!important;
+}*/
+
+.common-heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01rem !important;
+
+}
+
+.common-title {
+  margin-bottom: 4.2rem;
+}
+
+/* service section */
+
+@media screen and (max-width: 1200px) {
+  .more-info-section img {
+    position: absolute;
+    bottom: 10%;
+    /*right: 10%;*/
+    /*top: 50%;*/
+    top: 0;
+    left: 55%;
+    max-width: 100%;
+    width: 50%;
+    transform: scaleX(1);
+  }
+
+
+  .para-width {
+    width: 90%
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .more-info-section img {
+    display: none;
+  }
+}
+
+
+
+
+.service-section {
+
+  padding: 6rem 0 3rem 0 !important;
+}
+
+
+#serviceY {
+  justify-content: space-between;
+  gap: 10%;
+  width: 90%;
+  height: 90%;
+}
+
+
+/* service animation */
+
+
+#arrow {
+  background-color: #0b110a;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+#arrow:hover {
+  background-color: #c6c6c6;
+  border-radius: 100%;
+}
+
+
+#service {
+
+  background-image: url("bg-img1.jpg");
+  background-size: cover;
+  --g: 4px;
+  /* the gap */
+  --b: 12px;
+  /* border thickness*/
+  --c: #3a7135;
+  /* the color */
+
+
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+    var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: .3s;
+  border: 2px solid black;
+}
+
+#service:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.more-info-section {
+  background-image: url(bg-im2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+
+.grid-container2 {
+  display: grid;
+  gap: 10px;
+
+  padding: 10px;
+}
+
+.grid-item2 {
+
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.item12 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item22 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.item32 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.item42 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
+
+.footer p {
+  cursor: pointer;
+}
+
+.footer {
+
+  background-color: black;
+  align-items: flex-start;
+  justify-items: flex-start;
+
+  gap: 20px;
+}
+
+.insta p {
+  padding-top: 19px;
+  padding-bottom: 10px;
+}
+
+.whatsapp {
+
+  gap: 10px;
+  padding-left: 10px;
+
+}
+
+#logo {
+
+  padding-left: 30%;
+  padding-top: 10px;
+
+}
+
+
+
+/*  foorter page */
+
+.main-footer-section{
+  padding: 0 0 4rem 0;
+     background-color: #222;
+     color: var( --bs-main-color);
+ }
+ 
+ .contact-div{
+     background-color:  var(--bs-dark-primary);
+ }
+ 
+ .icon-div{
+     width: 5rem;
+     height: 5rem;
+     /*background: #1089ff;*/
+ }
+ 
+ .icon-  {
+     width: 2.5rem;
+     height: 2.5rem;
+     background-color: #1089ff;
+     color: var( --bs-main-color);
+ }
+ 
+ .icon-span .fa-brands, .fab{
+     color:white;
+ }
+ 
+ .carousel-indicators{
+     bottom: -20%;
+ }
+ 
+ .carousel-indicators [data-bs-target]{
+     margin-top: 2rem;
+     width: .7rem;
+     height: .7rem;
+     background-color: #1089ff;
+ }
+ 
+
+.icon- {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #1089ff;
+  color: var(--bs-main-color);
+}
+
+.icon-span .fa-brands,
+.fab {
+  color: white;
+}
+
+.carousel-indicators {
+  bottom: -20%;
+}
+
+.carousel-indicators [data-bs-target] {
+  margin-top: 2rem;
+  width: .7rem;
+  height: .7rem;
+  background-color: #1089ff;
+}
+
+
+
+
+.naam{
+  gap: 10px;
+}
+
+
+
+
+/*  package section*/
